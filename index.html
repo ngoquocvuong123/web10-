@@ -4,20 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS làm nổi bật thành phần URL</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f5f5f5;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .url-box {
+      font-size: 20px;
+      font-family: monospace;
+      background-color: #fff;
+      padding: 16px 24px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .protocol {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .domain {
+      color: #2980b9;
+      font-weight: bold;
+    }
+
+    .path {
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    .legend {
+      margin-top: 20px;
+      background-color: #fff;
+      padding: 16px 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .legend li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #555;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
 
   <h1>Phân tích thành phần URL</h1>
 
   <p class="url-box">
-    <span class="protocol">https://</span><span class="domain">example.com</span><span class="path">/about/contact.html</span>
+    <span class="protocol">https://</span><span class="domain">example.com</span><span class="path">/about.html</span>
+  </p>
+
+  <p class="url-box">
+    <span class="protocol">https://</span><span class="domain">github.com</span><span class="path">/ngoquocvuong123/web10</span>
+  </p>
+
+  <p class="url-box">
+    <span class="protocol">http://</span><span class="domain">www.school.edu.vn</span><span class="path">/lop/bai-1.html</span>
   </p>
 
   <ul class="legend">
-    <li><span class="protocol">Protocol</span>: giao thức truyền tải (https://)</li>
-    <li><span class="domain">Domain</span>: tên miền của website (example.com)</li>
-    <li><span class="path">Path</span>: đường dẫn tới trang/tài nguyên cụ thể (/about/contact.html)</li>
+    <li><span class="protocol">Protocol</span>: giao thức truyền tải dữ liệu, ví dụ http:// hoặc https://</li>
+    <li><span class="domain">Domain</span>: tên miền của website, ví dụ example.com</li>
+    <li><span class="path">Path</span>: đường dẫn tới trang hoặc tài nguyên cụ thể trên website, ví dụ /about.html</li>
   </ul>
 
   <footer>
